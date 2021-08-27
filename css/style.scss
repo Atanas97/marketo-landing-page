@@ -1,0 +1,482 @@
+@use '../scss/colors';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,900;1,600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+main{overflow-x: hidden;}
+li{list-style-type: none;}
+a{text-decoration: none;}
+.spacing >*+* {margin: 1.5rem 0;}
+
+//btn utility class
+.btn {
+    display: inline-block;
+    padding: .65rem 2.1rem;
+
+    color: #fff;
+    background: colors.$orange;
+    box-shadow: colors.$box-shadow;
+
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    border-radius: .5rem;
+}
+//section header span utility class
+.section-heading {
+    background: colors.$light-orange;
+    color: colors.$orange;
+    border-radius: .5rem;
+    padding: .3rem .6rem;
+}
+
+
+//Header styling from 17 to 64
+header{
+    width: 100%;
+    position: fixed;
+    box-shadow: colors.$box-shadow;
+    background: #fff;
+    z-index: 111;
+}
+.header {
+    position: relative;
+    // max-width: 85vw;
+    // margin: 0 auto;
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    
+    // width: 100%;
+
+    a{
+        color: colors.$gray;
+        font-weight: 700;
+    }
+    i {
+        color: colors.$orange;
+        background: colors.$light-orange;
+        padding: .8rem 1rem;
+        border-radius: .5rem;
+        cursor: pointer;
+    }
+}
+.header-nav {
+    width: 60vw;
+    box-shadow: colors.$box-shadow;
+    position: absolute;
+    right: 6%;
+    z-index: 11;
+    max-width: 30rem;
+    transform: scale(0,0);
+    transition: 350ms transform ease-in-out;
+    transform-origin: top right;
+    background: #fff;
+    ul{
+        display: grid;
+        gap: .5rerem;
+        padding: 1rem 1.2rem;
+        
+        a {
+        color: colors.$gray;
+        font-size: 1.5rem;
+        }
+        li:last-of-type{margin-bottom: 0;}
+        li:first-of-type{margin-bottom: 1.5rem;}
+    }
+    &.active{
+        transform: scale(1,1);
+    }
+}
+
+@media screen and (min-width: 45rem) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-nav{
+            all: unset;
+
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                padding-right: 2rem;
+
+                li{
+                    margin: 0 !important;
+                    a{font-size: 1.7rem;}
+                }
+            }
+        }
+}
+
+    #toggle-menu{display: none;}
+}
+
+@media (width > 50rem) {
+    .header {
+        max-width: 85vw;
+        margin: 0 auto;
+}
+}
+
+//Hero section - first section from 66 to 247
+.hero-bg{
+    position: relative;
+background: colors.$light-orange;
+
+    .cloud-1,
+    .cloud-2{
+        background: url(../images/cloud.png);
+        height: 15rem;
+        width: 1000rem;
+        position: absolute;
+        // transform: scale(10) !important;
+        // // height: 15rem;
+        bottom: 0;
+        
+    }
+
+        .cloud-1{
+            bottom: -5%;
+            animation: moveCloud1 25s  linear infinite;
+        }
+        .cloud-2{
+            opacity: .5;
+            bottom: 0;
+            animation: moveCloud2 25s  linear infinite;
+        }
+
+    @keyframes moveCloud1 {
+        from{
+            background-position-x: 0;
+        }
+        to {
+            background-position-x: 100%;
+        }
+    }
+    @keyframes moveCloud2 {
+        from{
+            background-position-x: 100%;
+        }
+        to {
+            background-position-x: 0;
+        }
+    }
+}
+.hero{
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 8.5rem;
+    overflow: hidden;
+    position: relative;
+    
+    &-first-col {
+        max-width: 90vw;
+        margin: 0 auto;
+        text-align: center;
+        
+        h1{
+            font-size: clamp(2.8rem, 4vw, 3.5rem);
+            color: colors.$gray;
+            line-height: 5rem;
+            text-transform: capitalize;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+        p{
+            color: colors.$light-gray;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+            line-height: clamp(2.4rem, 2vw, 3rem);
+            text-transform: capitalize;
+            padding: 1rem 0;
+        }
+        a{
+            font-size: 1.8rem;
+            margin:0;
+        }
+    }
+
+    &-second-col {
+        position: relative;
+        img {
+            display: block;
+            width: 100%;
+            padding-bottom: 2rem;
+            
+        }
+        
+    }
+    
+}
+
+@media screen and (min-width: 60rem) {
+    .hero{
+        display: flex;
+        align-items: center;
+
+        &-first-col{
+            flex: 1;
+            text-align: start;
+
+            h1{
+                margin: 0;
+            }
+        }
+        &-second-col {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            // img{max-width: 80%}
+        }
+
+        .cloud-1,
+        .cloud-2{
+            height: 20rem;
+            // bottom: 20%;
+        }
+    }
+
+}
+
+//Services styling from 249 to 302
+.services {
+    margin-top: 5rem;
+    text-align: center;
+
+    h2{
+        font-size: clamp(3.5rem, 4vw, 4rem);
+        color: colors.$gray;
+    }
+
+    &-collection{
+        width: 90vw;
+        margin: 2.5rem auto;
+        display: grid;
+        gap: 1rem;
+    }
+    &-card{
+        box-shadow: colors.$box-shadow;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: .5rem;
+        padding: 2rem;
+
+        img{padding-top: 1.5rem;}
+        h3{
+            font-size: clamp(2rem, 2vw, 2.5rem);
+            text-transform: capitalize;
+            color: colors.$gray;
+        }
+        p{
+            font-size: clamp(1.2rem, 2.7vw, 1.6rem);
+            line-height: clamp(2.3rem, 2.5vw, 3rem);
+            text-transform: capitalize;
+            color: colors.$light-gray;
+        }
+        a{
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 45rem){
+    .services-collection{
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        width: 85vw;
+    }
+}
+
+//About us from 304 to 391
+.about-us {
+    text-align: center;
+    width: 90%;
+    margin: 4rem auto;
+    h2{
+        font-size: clamp(3.5rem, 4vw, 4rem);
+        color: colors.$gray;
+    }
+    img{
+        display: block;
+        width: 90%;
+        margin: 4rem auto;
+    }
+
+    .about-us-right{
+        text-align: start;
+        h3{
+            font-size: clamp(2.3rem, 2vw, 2.5rem);
+            text-transform: capitalize;
+            color: colors.$gray;
+        }
+        p{
+            font-size: clamp(1.2rem, 2.7vw, 1.6rem);
+            line-height: clamp(2.3rem, 2.5vw, 3rem);
+            text-transform: capitalize;
+            color: colors.$light-gray;
+            margin: 1.5rem 0;
+        }
+    }
+    &-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    &-card{
+        display: grid;
+        place-items: center;
+        box-shadow: colors.$box-shadow;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: .5rem;
+        text-align: center;
+        padding: 1rem;
+
+        i{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: colors.$light-orange;
+            color: colors.$orange;
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            font-size: 1.7rem;
+        }
+        p{font-weight: 700;}
+    }
+    .wide {
+        grid-column: 1 / -1;
+    }
+}
+@media screen and (min-width: 45rem){
+    .about-us-cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .about-us .wide {
+    grid-column: 3/4;
+    }
+
+    .about-us-wrap{
+        display: flex;
+
+        .about-us-left,
+        .about-us-right{
+            flex: 1;
+        }
+        .about-us-right{
+            align-self: center;
+            
+            a{
+                padding: 1rem 2.5rem;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+//Portofio section styling 393 - X
+.portfolio {
+    text-align: center;
+
+    h2{
+        font-size: clamp(3.5rem, 4vw, 4rem);
+        color: colors.$gray;
+    }
+
+    &-collection{
+        width: 95vw;
+        margin: 4rem auto;
+
+        img{
+            display: block;
+            width: 100%;
+            height: 24rem;
+        }
+    }
+    &-card{
+        position: relative;
+        
+        &::after{
+            position: absolute;
+            content: '';
+            transition: 500ms clip-path ease-in-out;   
+            display: grid;
+            place-items: center;
+            background: #fff;
+            height: 100%;
+            width: 100%;
+            color: #555;
+            top: -50%;
+            right: -50%;
+            transform: translate(-50%, 50%);
+            -webkit-clip-path: circle(42.1% at 100% 0);
+            clip-path: circle(42.1% at 100% 0);
+            
+        }
+        p{
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            z-index: 1;
+            font-size: 4rem;
+            font-weight: 700;
+            color: colors.$gray;
+        }
+
+        &:hover::after{
+            clip-path: circle(141.4% at 100% 0);
+            transition: 500ms clip-path ease-in-out;
+            
+        }
+        &:hover .portfolio-info{
+        opacity: 1;
+        top: 40%;
+        transition: 1s opacity ease-in-out;
+        transition: 500ms top ease-in-out;
+    }
+    }
+    
+    &-info{
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%,-55%);
+        transition: 500ms ease-in-out;  
+        z-index: 111;
+        color: colors.$gray;
+
+        h3{font-size: clamp(1.7rem, 2.7vw, 2.7rem);}
+        
+        p {
+        font-size: 1.7rem;
+        padding-top: 3.5rem;
+        padding-right: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 45rem){
+    .portfolio-collection{
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        width: 85vw;
+    }
+}
