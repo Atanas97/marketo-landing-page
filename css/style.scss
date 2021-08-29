@@ -494,8 +494,7 @@ background: colors.$light-orange;
         
         p {
         font-size: 1.7rem;
-        padding-top: 3.5rem;
-        padding-right: 1.5rem;
+        top: 3rem;
         }
     }
 }
@@ -511,6 +510,9 @@ background: colors.$light-orange;
 //Pricing section styles from 485 - 520
 .pricing{
     @include mixins.sectionText(85vw);
+    &-container{
+        margin-top: 3rem;
+    }
     
     &-card{
         box-shadow: colors.$box-shadow;
@@ -560,6 +562,7 @@ background: colors.$light-orange;
 //Reviews section styles from 526 to 591
 .review{
     @include mixins.sectionText(85vw);
+    &-container{margin-top: 3rem;}
 
     &-card{
         box-shadow: colors.$box-shadow;
@@ -629,6 +632,8 @@ background: colors.$light-orange;
 //Contacts section from 593 - 696
 .contacts {
     @include mixins.sectionText(85vw);
+
+    &-container{margin-top: 3rem;}
 
     &-card {
         box-shadow: colors.$box-shadow;
@@ -746,13 +751,11 @@ background: colors.$light-orange;
             padding-bottom: 1rem;
 
         }
-
+        li:last-of-type{margin-bottom: 0; padding-bottom: 1.5rem;}
         a{
             display: inline-block;
             color: colors.$light-gray;
             font-size: 1.4rem;
-
-            &:last-of-type{margin-bottom: 0;}
         }
         i{
             font-size: 1.4rem;

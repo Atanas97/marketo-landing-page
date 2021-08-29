@@ -494,8 +494,7 @@ header {
 }
 .portfolio-info p {
   font-size: 1.7rem;
-  padding-top: 3.5rem;
-  padding-right: 1.5rem;
+  top: 3rem;
 }
 
 @media screen and (min-width: 45rem) {
@@ -513,6 +512,9 @@ header {
 .pricing h2 {
   font-size: clamp(3.5rem, 4vw, 4rem);
   color: #555;
+}
+.pricing-container {
+  margin-top: 3rem;
 }
 .pricing-card {
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
@@ -571,6 +573,9 @@ header {
 .review h2 {
   font-size: clamp(3.5rem, 4vw, 4rem);
   color: #555;
+}
+.review-container {
+  margin-top: 3rem;
 }
 .review-card {
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
@@ -643,6 +648,9 @@ header {
 .contacts h2 {
   font-size: clamp(3.5rem, 4vw, 4rem);
   color: #555;
+}
+.contacts-container {
+  margin-top: 3rem;
 }
 .contacts-card {
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
@@ -760,13 +768,14 @@ header {
   font-size: 1.7rem;
   padding-bottom: 1rem;
 }
+.footer-box li:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 1.5rem;
+}
 .footer-box a {
   display: inline-block;
   color: #777;
   font-size: 1.4rem;
-}
-.footer-box a:last-of-type {
-  margin-bottom: 0;
 }
 .footer-box i {
   font-size: 1.4rem;

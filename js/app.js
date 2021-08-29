@@ -11,6 +11,8 @@ btn.addEventListener('click', () => {
 })
 const hideMenu = () => {
     mobileNav.classList.remove('active')
+    btn.classList = 'fas fa-bars'
+
 }
 
 menuEls.forEach(list => {
