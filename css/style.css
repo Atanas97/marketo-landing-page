@@ -684,6 +684,7 @@ header {
 }
 .contacts-card iframe {
   width: 100%;
+  height: 40rem;
 }
 .contacts-card input:not([type=submit]) {
   display: block;
