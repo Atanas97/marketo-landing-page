@@ -1,0 +1,31 @@
+@use '../scss/colors';
+@mixin sectionText($width){
+    text-align: center;
+    width: $width;
+    margin: 4rem auto;
+    h2{
+        font-size: clamp(3.5rem, 4vw, 4rem);
+        color: colors.$gray;
+    }
+}
+
+@mixin cardAlignment($num){
+        
+        display: grid;
+        grid-template-columns: repeat($num ,1fr);   
+        gap: 1rem; 
+    
+}
+
+@mixin iconRounded(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fceae9;
+    color: #e8786e;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.7rem;
+    margin: 0 auto;
+}
