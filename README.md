@@ -9,7 +9,7 @@ modern css features(flexbox, grid and a few more css tricks), SASS preprocessor 
 
 ## Screenshots
 
-![App Screenshot](<img src="images/desktop">)
+![App Screenshot](<img src="./images/desktop">)
 
   
 ## Demo
