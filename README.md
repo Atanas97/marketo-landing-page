@@ -9,7 +9,7 @@ modern css features(flexbox, grid and a few more css tricks), SASS preprocessor 
 
 ## Screenshots
 
-![App Screenshot](https://imgur.com/ZsYGSyB)
+![App Screenshot](<img src="images/desktop">)
 
   
 ## Demo
