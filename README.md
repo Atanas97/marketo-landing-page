@@ -10,7 +10,10 @@ modern css features(flexbox, grid and a few more css tricks), SASS preprocessor 
 ## Screenshots
 
 ![App Screenshot]
-![desktop](https://user-images.githubusercontent.com/77697122/131926127-ea70b685-d65c-4407-9913-81bdcc2144f0.png)
+
+
+https://user-images.githubusercontent.com/77697122/131926499-de850acf-1c6e-4b63-a20f-62120e4bc498.mp4
+
 
   
 ## Demo
