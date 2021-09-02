@@ -9,14 +9,13 @@ modern css features(flexbox, grid and a few more css tricks), SASS preprocessor 
 
 ## Screenshots
 
-![App Screenshot]
-
 
 https://user-images.githubusercontent.com/77697122/131926499-de850acf-1c6e-4b63-a20f-62120e4bc498.mp4
 
 
   
 ## Demo
+For a full view, follow the link bellow
 
 https://mystifying-lichterman-320300.netlify.app/
 
