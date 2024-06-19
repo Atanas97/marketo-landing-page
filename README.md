@@ -17,7 +17,7 @@ https://user-images.githubusercontent.com/77697122/131926499-de850acf-1c6e-4b63-
 ## Demo
 For a full view, follow the link bellow
 
-[Demo](https://iridescent-custard-4d3216.netlify.app/)
+[Demo](https://merry-tiramisu-beb31a.netlify.app/)
 
   
 ## Authors
