@@ -148,7 +148,6 @@ header {
   .header-nav ul li a {
     font-size: 1.7rem;
   }
-
   #toggle-menu {
     display: none;
   }
@@ -179,22 +178,12 @@ header {
 }
 .hero-bg .cloud-1 {
   bottom: -5%;
-  -webkit-animation: moveCloud1 25s linear infinite;
-          animation: moveCloud1 25s linear infinite;
+  animation: moveCloud1 25s linear infinite;
 }
 .hero-bg .cloud-2 {
   opacity: 0.5;
   bottom: 0;
-  -webkit-animation: moveCloud2 25s linear infinite;
-          animation: moveCloud2 25s linear infinite;
-}
-@-webkit-keyframes moveCloud1 {
-  from {
-    background-position-x: 0;
-  }
-  to {
-    background-position-x: 100%;
-  }
+  animation: moveCloud2 25s linear infinite;
 }
 @keyframes moveCloud1 {
   from {
@@ -202,14 +191,6 @@ header {
   }
   to {
     background-position-x: 100%;
-  }
-}
-@-webkit-keyframes moveCloud2 {
-  from {
-    background-position-x: 100%;
-  }
-  to {
-    background-position-x: 0;
   }
 }
 @keyframes moveCloud2 {
@@ -279,7 +260,7 @@ header {
     justify-content: center;
   }
   .hero .cloud-1,
-.hero .cloud-2 {
+  .hero .cloud-2 {
     height: 20rem;
   }
 }
@@ -395,16 +376,14 @@ header {
   .about-us-cards {
     grid-template-columns: repeat(3, 1fr);
   }
-
   .about-us .wide {
     grid-column: 3/4;
   }
-
   .about-us-wrap {
     display: flex;
   }
   .about-us-wrap .about-us-left,
-.about-us-wrap .about-us-right {
+  .about-us-wrap .about-us-right {
     flex: 1;
   }
   .about-us-wrap .about-us-right {
@@ -427,7 +406,7 @@ header {
 .portfolio-collection {
   display: grid;
   gap: 2rem;
-  width: 95vw;
+  width: 90vw;
   margin: 4rem auto;
 }
 .portfolio-collection img {
@@ -506,7 +485,7 @@ header {
 }
 .pricing {
   text-align: center;
-  width: 85vw;
+  width: 90vw;
   margin: 4rem auto;
 }
 .pricing h2 {
@@ -567,7 +546,7 @@ header {
 }
 .review {
   text-align: center;
-  width: 85vw;
+  width: 90vw;
   margin: 4rem auto;
 }
 .review h2 {
@@ -642,7 +621,7 @@ header {
 }
 .contacts {
   text-align: center;
-  width: 85vw;
+  width: 90vw;
   margin: 4rem auto;
 }
 .contacts h2 {
@@ -722,10 +701,10 @@ header {
     gap: 1rem;
   }
   .contacts-container .card1,
-.contacts-container .card2,
-.contacts-container .card3,
-.contacts-container .card4,
-.contacts-container .card5 {
+  .contacts-container .card2,
+  .contacts-container .card3,
+  .contacts-container .card4,
+  .contacts-container .card5 {
     flex: 1;
   }
   .contacts-container .small-contacts {
@@ -736,7 +715,6 @@ header {
     display: flex;
     gap: 1rem;
   }
-
   .contacts-card h2 {
     font-size: 2.5rem;
   }
@@ -755,12 +733,16 @@ header {
     font-size: 1.5rem;
   }
 }
-.footer {
+footer {
   background: #fceae9;
 }
+footer section {
+  max-width: 90vw;
+  margin-inline: auto;
+  padding-block: 2rem;
+}
+
 .footer-box {
-  width: 85vw;
-  margin: 0 auto;
   padding-top: 1.5rem;
 }
 .footer-box h3 {
@@ -791,7 +773,7 @@ header {
     justify-content: center;
   }
   .footer-box {
-    width: 85vw;
+    width: 90vw;
     margin: 0 auto;
   }
   .footer-box ul li {
