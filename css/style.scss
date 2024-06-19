@@ -173,7 +173,7 @@ header {
 
 @media (width > 50rem) {
     .header {
-        max-width: 85vw;
+        max-width: 90vw;
         margin: 0 auto;
 
         &-logo {
@@ -232,7 +232,7 @@ header {
     }
 }
 .hero {
-    width: 80vw;
+    width: 90vw;
     margin: 0 auto;
     padding-top: 8.5rem;
     overflow: hidden;
@@ -349,7 +349,6 @@ header {
     .services-collection {
         gap: 1.5rem;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        width: 85vw;
     }
 }
 
@@ -520,7 +519,6 @@ header {
     .portfolio-collection {
         gap: 1.5rem;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        width: 85vw;
     }
 }
 
